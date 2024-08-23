@@ -9,7 +9,7 @@ const Article = ({article, id}) => {
       <div className="thumbnail w-full h-auto md:h-[220px] rounded-t overflow-hidden">
         <img loading="lazy"
           className="rounded-t h-full w-full hover:scale-125 object-cover transition-all"
-          src={`${import.meta.env.VITE_SERVER_URL}${article?.thumbnail?.data?.attributes?.url}`}
+          src={article?.thumbnail?.data?.attributes?.url}
           alt="Thumbnail"
         />
       </div>
