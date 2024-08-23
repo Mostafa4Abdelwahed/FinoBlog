@@ -6,7 +6,7 @@ const smallArticle = ({article, id}) => {
   return (
     <Link to={`/articles/${id}`} className="flex gap-3.5">
       <img loading="lazy"
-        src={`${import.meta.env.VITE_SERVER_URL}${article?.thumbnail?.data?.attributes?.url}`}
+        src={article?.thumbnail?.data?.attributes?.url}
         width={100}
         alt="Thumbnail"
       />
