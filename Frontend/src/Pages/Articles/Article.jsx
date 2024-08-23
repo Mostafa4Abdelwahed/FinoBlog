@@ -86,9 +86,7 @@ const Article = () => {
       <div className="content pt-5">
         <img
           className="mx-auto"
-          src={`${import.meta.env.VITE_SERVER_URL}${
-            data?.data?.attributes?.thumbnail?.data?.attributes?.url
-          }`}
+          src={data?.data?.attributes?.thumbnail?.data?.attributes?.url}
           alt="Thumbnail"
         />
         <p className="mt-7">{data?.data?.attributes?.content}</p>
