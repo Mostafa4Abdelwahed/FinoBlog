@@ -1,6 +1,8 @@
 # 📢 FinoBlog  
  A blog website used to add blogs to and show blogs from json server built with React, JavaScript, and Tailwind CSS.
 
+# Image From App
+<img src="https://j.top4top.io/p_3157vmj921.png" />
 
 # 🛠️ Tech stack 
 
