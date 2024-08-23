@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <div className="flex justify-between items-center">
           <h1 className="text-center mx-auto md:mx-0">
-            Made with ❤️ by Mostafa Mohamed
+          مصنوعة من ❤️ بواسطة مصطفى محمد
           </h1>
           <ul className="hidden md:flex items-center gap-6 text-sm">
             {pages?.data?.slice(0, 5).map((page, index) => {

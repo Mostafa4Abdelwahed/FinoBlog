@@ -10,13 +10,13 @@ const Error = () => {
         alt="Error"
       />
       <h1 className="text-center text-3xl font-bold mt-5">
-        An Error Cccurred, Please Try Again
+      حدث خطأ، يرجى المحاولة مرة أخرى
       </h1>
       <Link
         to="/"
         className="bg-main w-40 text-center text-white px-5 py-3 mx-auto rounded mt-5"
       >
-        Go To Home
+        الصفحة الرئيسية
       </Link>
     </div>
   );

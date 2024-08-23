@@ -6,7 +6,7 @@ const PopularArticles = () => {
   const { data: articles, isLoading } = useGetArticlesQuery(1);
   return (
     <div className="bg-white p-5 rounded">
-      <h1 className="uppercase font-bold text-xl mb-5">most popular</h1>
+      <h1 className="uppercase font-bold text-xl mb-5">المقالات الشائعة</h1>
       {
         isLoading && <div className="flex flex-col gap-5">
           <SkeletonSmallArticle />

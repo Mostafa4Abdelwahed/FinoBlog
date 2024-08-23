@@ -36,13 +36,13 @@ const Category = () => {
     <div>
       <div className="bg-white rounded py-5 px-4 flex justify-between">
         <h1 className="uppercase font-bold">
-          {`Showing Posts With The Category "${data?.data?.attributes?.name}"`}
+          {`عرض مشاركات تصنيف "${data?.data?.attributes?.name}"`}
         </h1>
         <Link
           className="bg-main text-white uppercase rounded text-xs font-bold px-2.5 flex items-center gap-1 hover:gap-2.5 hover:bg-gray-100 hover:text-black transition-all"
           to="/articles"
         >
-          Show all
+          عرض الكل
           <FaArrowRight />
         </Link>
       </div>
@@ -53,7 +53,7 @@ const Category = () => {
 
 
       {data?.data?.attributes?.articles?.data?.length <= 0 ? 
-        (<h1 className="text-center text-4xl font-bold mt-7">{`No Articles In "${data?.data?.attributes?.name}"`}</h1>) :
+        (<h1 className="text-center text-4xl font-bold mt-7">{`لا يوجد مقالات في "${data?.data?.attributes?.name}"`}</h1>) :
       <div className="articles">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
         {articles?.data

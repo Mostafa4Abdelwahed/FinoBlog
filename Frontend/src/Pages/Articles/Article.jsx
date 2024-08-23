@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import { GoClock } from "react-icons/go";
 import { IoIosArrowForward } from "react-icons/io";
 import { TiHomeOutline } from "react-icons/ti";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useGetSingleArticleQuery } from "../../Redux/ApiCalls/articleSlice";
 import Error from "../../Components/Error";
 import SkeletonPage from "../../Components/Skeletons/SkeletonPage";
+import { BiCategory } from "react-icons/bi";
 
 const Article = () => {
+  const navigate = useNavigate()
   const params = useParams();
   const { id } = params;
   const { data, isLoading, isError } = useGetSingleArticleQuery(id);
@@ -24,6 +26,9 @@ const Article = () => {
     );
   }
   if (isError) {
+    setTimeout(() => {
+      navigate("/")
+    }, 2000)
     return (
       <Error />
     );
@@ -34,7 +39,7 @@ const Article = () => {
         <ol className="flex items-center gap-1 text-sm text-gray-600">
           <li>
             <Link to="/" className="block transition hover:text-gray-700">
-              <span className="sr-only"> Home </span>
+              <span className="sr-only"> الرئيسية </span>
               <TiHomeOutline />
             </Link>
           </li>
@@ -48,7 +53,7 @@ const Article = () => {
               to="/articles"
               className="block transition hover:text-gray-700"
             >
-              Articles
+              المقالات
             </Link>
           </li>
 
@@ -58,7 +63,9 @@ const Article = () => {
 
           <li>
             <a className="block transition hover:text-gray-700">
+              <p className="line-clamp-1">
               {data?.data?.attributes?.title}
+              </p>
             </a>
           </li>
         </ol>
@@ -72,7 +79,7 @@ const Article = () => {
           {date}
         </span>
         <span className="flex items-center gap-2">
-          <GoClock className="text-main" />
+          <BiCategory className="text-main" />
           {data?.data?.attributes.category?.data?.attributes?.name}
         </span>
       </div>

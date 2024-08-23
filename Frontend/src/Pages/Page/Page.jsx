@@ -20,7 +20,7 @@ const Page = () => {
       <ol className="flex items-center gap-1 text-sm text-gray-600">
         <li>
           <Link to="/" className="block transition hover:text-gray-700">
-            <span className="sr-only"> Home </span>
+            <span className="sr-only"> الرئيسية </span>
             <TiHomeOutline />
           </Link>
         </li>
@@ -30,12 +30,12 @@ const Page = () => {
         </li>
 
         <li>
-          <Link
+          <p
             to="/articles"
             className="block transition hover:text-gray-700"
           >
-            Pages
-          </Link>
+            الصفحات
+          </p>
         </li>
 
         <li className="rtl:rotate-180">
@@ -43,8 +43,10 @@ const Page = () => {
         </li>
 
         <li>
-          <a className="block transition hover:text-gray-700">
+          <a className="block transition hover:text-gray-700 line-clamp-1">
+            <p className="line-clamp-1">
             {data?.data?.attributes?.title}
+            </p>
           </a>
         </li>
       </ol>

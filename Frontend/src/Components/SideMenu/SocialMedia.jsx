@@ -11,7 +11,7 @@ const SocialMedia = () => {
   const { data, isLoading } = useGetContactsQuery();
   return (
     <div className="bg-white p-5 rounded">
-      <h1 className="uppercase font-bold text-xl mb-5">social media</h1>
+      <h1 className="uppercase font-bold text-xl mb-5">وسائل التواصل</h1>
 
       {isLoading && (
         <div>
@@ -46,7 +46,15 @@ const SocialMedia = () => {
               ) : social?.attributes?.name === "Whatsapp" ? (
                 <FaWhatsapp />
               ) : null}
-              {social?.attributes?.name}
+              {social?.attributes?.name === "Facebook" ? (
+                "فيسبوك"
+              ) : social?.attributes?.name === "Youtube" ? (
+                "يوتيوب"
+              ) : social?.attributes?.name === "LinkedIn" ? (
+                "لينكدإن"
+              ) : social?.attributes?.name === "Whatsapp" ? (
+                "واتساب"
+              ) : null}
             </a>
           );
         })}

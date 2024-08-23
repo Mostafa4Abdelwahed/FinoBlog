@@ -8,7 +8,7 @@ const Categories = () => {
 
   return (
     <div className="bg-white p-5 rounded">
-      <h1 className="uppercase font-bold text-xl mb-5">categories</h1>
+      <h1 className="uppercase font-bold text-xl mb-5">التصنيفات</h1>
       <div className="flex flex-col gap-5">
         {
           isLoading && <div className="flex flex-col gap-5">
@@ -31,7 +31,7 @@ const Categories = () => {
                 {category?.attributes?.name}
               </div>
               <span className="bg-main text-white  rounded text-xs flex items-center px-2 uppercase font-bold">
-                {category?.attributes?.articles?.data?.length || 0} posts
+                {category?.attributes?.articles?.data?.length || 0} مقال
               </span>
             </Link>
           );

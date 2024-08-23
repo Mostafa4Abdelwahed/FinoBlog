@@ -2,24 +2,18 @@ module.exports = [
   'strapi::logger',
   'strapi::errors',
   {
-    name: "strapi::security",
+    name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
-        direactives: {
-          "content-src": ["'self'", 'http'],
-          "img-src": ["'self'", 'data', 'blob:', 'mark-assets.strapi.io', 'res.cloudinary.com'],
-          'media-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'market-assets.strapi.io',
-            'res.cloudinary.com'
-          ],
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           upgradeInsecureRequests: null,
-        }
-      }
-    }
+        },
+      },
+    },
   },
   'strapi::cors',
   'strapi::poweredBy',

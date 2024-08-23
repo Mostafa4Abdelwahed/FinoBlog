@@ -36,7 +36,7 @@ const Navbar = () => {
                     fill="#fff"
                   ></path>
                 </svg>
-                <span className="text-2xl">FinoBlog</span>
+                <span className="text-2xl">مدونة فينو</span>
               </span>
             </Link>
           </div>
